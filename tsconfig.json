@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

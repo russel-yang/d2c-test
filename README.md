@@ -1,8 +1,22 @@
 # Contentful migration
-## Prequisite install the contentful-cli globally
- - https://www.contentful.com/developers/docs/tutorials/cli/installation/
 
+Example migration script:
+
+```ts
+import { MigrationFunction } from 'contentful-migration';
+
+const migrate: MigrationFunction = migration => {
+  const dog = migration.createContentType('dog').name('Dog');
+  dog
+    .createField('name')
+    .type('Symbol')
+    .name('Name')
+    .required(true);
+};
+
+module.exports = migrate;
+```
 
 ## Resources
-- https://www.contentful.com/developers/docs/tutorials/cli/scripting-migrations/
-  
+
+- [Scripting Migrations](https://www.contentful.com/developers/docs/tutorials/cli/scripting-migrations/)

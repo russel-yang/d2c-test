@@ -2,9 +2,9 @@
   "name": "d2c-contentful",
   "version": "1.0.0",
   "description": "Contentful related scripts, including migration",
-  "main": "index.js",
   "scripts": {
-    "test-migration": "sh ./scripts/contentful-migration/test-migration.sh"
+    "lint": "eslint **/*.ts",
+    "test-migration": "ts-node ./scripts/test-migration"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,21 @@
     "contentful",
     "migration"
   ],
-  "author": "",
-  "homepage": "https://github.com/take-two/d2c-contentful#readme"
+  "homepage": "https://github.com/take-two/d2c-contentful#readme",
+  "author": "Take-Two Interactive, Inc.",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@types/node": "^14.0.3",
+    "contentful-management": "^5.26.3",
+    "contentful-migration": "^1.1.0",
+    "dotenv-load": "^2.0.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "devDependencies": {
+    "@take-two/eslint-config-t2gp": "^2.1.1",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.5.0"
+  }
 }
