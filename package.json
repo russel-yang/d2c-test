@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@take-two/eslint-config-t2gp": "^2.2.0",
-    "danger": "^10.2.0",
+    "danger": "10.1.1",
     "eslint": "^6.8.0",
     "prettier": "^1.19.1",
     "stylelint": "^13.5.0"
