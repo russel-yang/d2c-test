@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: rokroskar/workflow-run-cleanup-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.T2GP_BUILD_TOKEN }}
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -57,4 +57,4 @@ jobs:
       - name: Danger checks
         run: npm run ci:danger
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.T2GP_BUILD_TOKEN }}
