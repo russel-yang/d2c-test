@@ -54,3 +54,7 @@ jobs:
           CONTENTFUL_MANAGEMENT_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_ACCESS_TOKEN }}
           CONTENTFUL_DELIVERY_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_ACCESS_TOKEN }}
           ENVIRONMENT_ID: ${{ github.head_ref }}
+      - name: Danger checks
+        run: npm run ci:danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

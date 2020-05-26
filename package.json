@@ -6,7 +6,8 @@
     "lint": "eslint **/*.ts",
     "test-migration": "ts-node ./scripts/test-migration",
     "ci:prepare": "ts-node ./scripts/ci/environment-prepare",
-    "ci:cleanup": "ts-node ./scripts/ci/environment-cleanup"
+    "ci:cleanup": "ts-node ./scripts/ci/environment-cleanup",
+    "ci:danger": "danger ci"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@take-two/eslint-config-t2gp": "^2.2.0",
+    "danger": "^10.2.0",
     "eslint": "^6.8.0",
     "prettier": "^1.19.1",
     "stylelint": "^13.5.0"
