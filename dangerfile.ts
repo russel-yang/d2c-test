@@ -17,7 +17,6 @@ const dangerousChanges = [
 ];
 
 Promise.all(
-  danger.git.created_files.concat(danger.git.modified_files).map(async path => {
     const file = await danger.github.utils.fileContents(path);
     const lines = file.split('\n');
     lines.forEach((line, lineNumber) => {
@@ -30,6 +29,10 @@ Promise.all(
       }
     });
   })
+  danger.git.created_files
+    .concat(danger.git.modified_files)
+    .filter(path => path.startsWith('scripts/active/'))
+    .map(async path => {
 ).catch(err => {
   console.error(err);
   process.exit(1);
