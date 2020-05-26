@@ -20,3 +20,4 @@ module.exports = migrate;
 ## Resources
 
 - [Scripting Migrations](https://www.contentful.com/developers/docs/tutorials/cli/scripting-migrations/)
+- [Contentful management API](https://github.com/contentful/contentful-management.js)
