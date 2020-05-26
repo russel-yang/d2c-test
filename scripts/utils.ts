@@ -119,9 +119,6 @@ export async function applyMigrations(environmentId: string) {
     spaceId: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_MANAGEMENT_ACCESS_TOKEN,
     environmentId,
-    // this option isn't included in their type definition for some reason
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
     yes: true
   });
   console.log('Active migration applied');
