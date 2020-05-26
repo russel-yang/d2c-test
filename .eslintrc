@@ -1,13 +1,5 @@
 {
-  // TODO: don't use react-specific linting
-  "extends": "@take-two/eslint-config-t2gp/lib/eslintrc",
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".ts", ".d.ts"]
-      }
-    }
-  },
+  "extends": "@take-two/eslint-config-t2gp/lib/eslintrc-base",
   "rules": {
     "no-console": "off" // we want migration logs for clarity
   }
