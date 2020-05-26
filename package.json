@@ -4,7 +4,9 @@
   "description": "Contentful related scripts, including migration",
   "scripts": {
     "lint": "eslint **/*.ts",
-    "test-migration": "ts-node ./scripts/test-migration"
+    "test-migration": "ts-node ./scripts/test-migration",
+    "ci:prepare": "ts-node ./scripts/ci/environment-prepare",
+    "ci:cleanup": "ts-node ./scripts/ci/environment-cleanup"
   },
   "repository": {
     "type": "git",
